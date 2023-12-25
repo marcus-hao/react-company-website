@@ -1,6 +1,7 @@
 import './App.css';
 import AboutUs from './components/AboutUs'; // Import the AboutUs component
 import NavBar from './components/NavBar/NavBar';
+import useDocumentTitle from './hooks/useDocumentTitle';
 import { useEffect } from 'react';
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
     // Scroll to top when page loads
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   }, []);
+
+  // Set the website title
+  useDocumentTitle("HabisLiao | From Delay to A's: HabisLiao Way!");
 
   return (
     <div className="App">
