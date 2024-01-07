@@ -39,10 +39,9 @@ const Contact = () => {
                             <div className='flex flex-col'>
                                 <i className='fas fa-map-marker-alt pt-2 pr-2' />
                             </div>
-                            <div className='flex flex-col'>
+                            <div className='flex flex-col items-start'>
                                 <h2 className='text-2xl'>Address</h2>
-                                <p className='text-gray-200'>
-                                    54 Jalan Lebarkan Masa, Santai City, 11800 USM, Penang</p>
+                                <p className='text-gray-200'>HabisLiao Sdn Bhd, Jalan Malas, Penang</p>
                             </div>
                         </div>
 
@@ -51,7 +50,7 @@ const Contact = () => {
                                 <i className='fas fa-phone-alt pt-2 pr-2' />
                             </div>
 
-                            <div className='flex flex-col'>
+                            <div className='flex flex-col items-start'>
                                 <h2 className='text-2xl'>Call Us</h2>
                                 <p className='text-gray-200'>Tel: +604-653 3647</p>
 
@@ -63,7 +62,7 @@ const Contact = () => {
                                 <i className='fas fa-envelope pt-2 pr-2' />
                             </div>
 
-                            <div className='flex flex-col'>
+                            <div className='flex flex-col items-start'>
                                 <h2 className='text-2xl'>Email</h2>
                                 <p className='text-gray-200'>contact@habisliao.gg</p>
                             </div>
