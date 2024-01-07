@@ -1,6 +1,9 @@
+import { Route, BrowserRouter, Routes, Navigate } from 'react-router-dom';
 import './App.css';
-import AboutUs from './components/AboutUs'; // Import the AboutUs component
-import NavBar from './components/NavBar/NavBar';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Signup from './pages/Signup';
+import NavBar from './components/NavBar';
 import useDocumentTitle from './hooks/useDocumentTitle';
 import { useEffect } from 'react';
 
@@ -14,19 +17,19 @@ function App() {
   useDocumentTitle("HabisLiao | From Delay to A's: HabisLiao Way!");
 
   return (
-    <div className="App">
-      <header>
-        <h1>HabisLiao Solutions</h1>
-      </header>
-      <main>
-        <NavBar /> {/* Include the NavBar component */}
-        <AboutUs /> {/* Include the AboutUs component */}
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </main>
-      <footer>
-        <p>&copy; 2023 HabisLiao Solutions. All rights reserved.</p>
-      </footer>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <NavBar /> {/*Include the NavBar component */}
+      </div>
+
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/contact" element={<Contact />} /> {/* Include the Contact component */}
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+      
+    </BrowserRouter>
   );
 }
 
