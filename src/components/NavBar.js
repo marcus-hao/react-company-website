@@ -1,31 +1,77 @@
-import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/images/logo-white-transparent.png';
 
-// TODO: Navbar cuts off at small size
-
 const NavBar = () => {
-    return (
-        <nav className="bg-gray-800">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16">
-                    <div className="flex items-center justify-between w-full">
-                        <div className="flex-shrink-0">
-                            <img className="h-12 w-32" src={Logo} alt="Logo" />
-                        </div>
-                        <div className="hidden md:block">
-                            <div className="ml-10 flex items-baseline space-x-4">
-                                <Link to="/home" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-                                <Link to="/about" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</Link>
-                                <Link to="/contact" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact Us</Link>
-                                <Link to="/signup" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Signup</Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  const [navbar, setNavBar] = useState(false);
+  return (
+    <>
+      <nav className='w-full bg-blue-900 shadow'>
+        <div className='justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8'>
+          <div>
+            <div className='flex items-center justify-between py-3 md:py-5 md:block'>
+              {/* Logo  */}
+              <Link to="/">
+                <img className="h-12 w-32" src={Logo} alt="Logo" />
+              </Link>
+
+              <div className='md:hidden'>
+                {/* Define state hook to toggle navbar state when clicked */}
+                <button className='p-2 text-gray-100 rounded-md outline-none focus:border-gray-400 focus:border' onClick={() => setNavBar(!navbar)}
+                >
+                  {/* Render close or hamburger icon depending on navbar state */}
+                  {navbar ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-6 h-6"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-6 h-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
+                    </svg>)}
+                </button>
+              </div>
             </div>
-        </nav>
-    );
+          </div>
+          <div>
+            <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'
+              }`}>
+              <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                <li className="text-gray-100 hover:text-blue-600">
+                  <Link to="/home">Home</Link>
+                </li>
+                <li className="text-gray-100 hover:text-blue-600">
+                  <Link to="/about">About</Link>
+                </li>
+                <li className="text-gray-100 hover:text-blue-600">
+                  <Link to="/contact">Contact Us</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
 };
 
 export default NavBar;

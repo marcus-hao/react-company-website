@@ -6,11 +6,12 @@ import Signup from './pages/Signup';
 import NavBar from './components/NavBar';
 import useDocumentTitle from './hooks/useDocumentTitle';
 import { useEffect } from 'react';
+import About from './pages/About';
 
 function App() {
   useEffect(() => {
     // Scroll to top when page loads
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }, []);
 
   // Set the website title
@@ -19,16 +20,14 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <NavBar /> {/*Include the NavBar component */}
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/contact" element={<Contact />} /> {/* Include the Contact component */}
+          <Route path="/about" element={<About />} /> {/* Include the Contact component */}
+        </Routes>
       </div>
-
-      <Routes>
-        <Route path="/" element={<Navigate to="/home" />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/contact" element={<Contact />} /> {/* Include the Contact component */}
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
-      
     </BrowserRouter>
   );
 }
