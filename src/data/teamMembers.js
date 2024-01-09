@@ -12,7 +12,7 @@ export const team = [
     id: 2,
     title: 'Fathin Batrisya',
     position: 'Chief Operating Officer',
-    quote: 'At HabisLiao, our COO leads operational excellence, ensuring efficient and seamless solutions that exceed client expectations',
+    quote: 'Our COO leads our operations, creating the best solutions that unlock student\'s true potential. She creates personalized study plans and innovative solutions.',
     tag: 'COO',
     linkImg:
       'https://i.im.ge/2024/01/07/3UXIT0.Fathin2.png',
