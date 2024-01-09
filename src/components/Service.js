@@ -1,4 +1,8 @@
 import React from 'react'
+import image1 from '../assets/images/student-stress.jpg';
+import image2 from '../assets/images/time-management.jpg';
+import image3 from '../assets/images/workshop.jpg';
+// Images by storyset on Freepik
 
 // I give up, not enough time, i'm gonna use tailwind components
 export default function Service() {
@@ -13,6 +17,9 @@ export default function Service() {
                             </div>
                             <div class="p-8">
                                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Procrastination Assessment</h2>
+                                <div class="flex justify-center items-center">
+                                    <img src={image1} alt='stressed out student' className='w-2/4 h-auto' />
+                                </div>
                                 <p class="text-gray-600 mb-6">Say no to "later"</p>
                                 <p class="text-4xl font-bold text-gray-800 mb-6">RM49.99</p>
                                 <ul class="text-sm text-gray-600 mb-6">
@@ -47,6 +54,9 @@ export default function Service() {
                             </div>
                             <div class="p-8">
                                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Personalized Study Plans</h2>
+                                <div class="flex justify-center items-center">
+                                    <img src={image2} alt='time management' className='w-2/4 h-auto' />
+                                </div>
                                 <p class="text-gray-600 mb-6">Time management made easy</p>
                                 <p class="text-4xl font-bold text-gray-800 mb-6">RM69.99</p>
                                 <ul class="text-sm text-gray-600 mb-6">
@@ -81,6 +91,9 @@ export default function Service() {
                             </div>
                             <div class="p-8">
                                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Study Skills Workshop</h2>
+                                <div class="flex justify-center items-center">
+                                    <img src={image3} alt='conduct workshops' className='w-2/4 h-auto' />
+                                </div>
                                 <p class="text-gray-600 mb-6">Exam tips and tricks</p>
                                 <p class="text-4xl font-bold text-gray-800 mb-6">RM99.99</p>
                                 <ul class="text-sm text-gray-600 mb-6">
