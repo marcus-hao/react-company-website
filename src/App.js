@@ -2,11 +2,11 @@ import { Route, BrowserRouter, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
-import Signup from './pages/Signup';
 import NavBar from './components/NavBar';
 import useDocumentTitle from './hooks/useDocumentTitle';
 import { useEffect } from 'react';
 import About from './pages/About';
+import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
@@ -25,8 +25,9 @@ function App() {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/contact" element={<Contact />} /> {/* Include the Contact component */}
-          <Route path="/about" element={<About />} /> {/* Include the Contact component */}
+          <Route path="/about" element={<About />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
