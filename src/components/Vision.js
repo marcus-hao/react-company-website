@@ -2,7 +2,7 @@ import React from 'react'
 
 const Vision = () => {
     return (
-        <div className='w-full bg-white py-[50px]'>
+        <div className='w-full bg-white py-[50px] pt-[120px]'>
             <div className='md:max-w-[1480px] m-auto  max-w-[600px]  px-4 md:px-0'>
                 <div className='flex justify-center'>
                     <ul>
