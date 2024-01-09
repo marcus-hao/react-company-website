@@ -1,8 +1,10 @@
 import React from 'react';
 import useDocumentTitle from '../hooks/useDocumentTitle';
+import useScrollToTop from '../hooks/useScrollToTop';
 
 const Contact = () => {
     useDocumentTitle('Contact Us - HabisLiao');
+    useScrollToTop();
     return (
         <div id="contact" className="flex justify-center items-center mt-8 w-full bg-white py-12 lg:py-24">
             <div className="container mx-auto my-8 px-4 lg:px-20">

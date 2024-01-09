@@ -12,7 +12,7 @@ function App() {
     // Scroll to top when page loads
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }, []);
-
+  
   return (
     <BrowserRouter>
       <div className="App">
@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/contact" element={<Contact />} /> {/* Include the Contact component */}
+          <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
         </Routes>
         <Footer />

@@ -4,9 +4,11 @@ import TeamCard from '../components/TeamCard';
 import Slider from 'react-slick';
 import { team } from '../data/teamMembers';
 import useDocumentTitle from '../hooks/useDocumentTitle';
+import useScrollToTop from '../hooks/useScrollToTop';
 
 function About() {
-    useDocumentTitle('About Us - HabisLiao')
+    useDocumentTitle('About Us - HabisLiao');
+    useScrollToTop();
     var settings = {
         dots: true,
         infinite: false,
