@@ -65,6 +65,9 @@ function Footer() {
                                     <Link to="/about">About</Link>
                                 </li>
                                 <li className="text-gray-100 hover:text-blue-600">
+                                    <a href="#services">Our Services</a>
+                                </li>
+                                <li className="text-gray-100 hover:text-blue-600">
                                     <Link to="/contact">Contact Us</Link>
                                 </li>
                             </nav>
