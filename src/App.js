@@ -3,7 +3,6 @@ import './App.css';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import NavBar from './components/NavBar';
-import useDocumentTitle from './hooks/useDocumentTitle';
 import { useEffect } from 'react';
 import About from './pages/About';
 import Footer from './components/Footer';
@@ -13,9 +12,6 @@ function App() {
     // Scroll to top when page loads
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }, []);
-
-  // Set the website title
-  useDocumentTitle("HabisLiao | From Delay to A's: HabisLiao Way!");
 
   return (
     <BrowserRouter>

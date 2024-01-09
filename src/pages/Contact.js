@@ -1,6 +1,8 @@
 import React from 'react';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const Contact = () => {
+    useDocumentTitle('Contact Us - HabisLiao');
     return (
         <div id="contact" className="flex justify-center items-center mt-8 w-full bg-white py-12 lg:py-24">
             <div className="container mx-auto my-8 px-4 lg:px-20">
@@ -41,7 +43,8 @@ const Contact = () => {
                             </div>
                             <div className='flex flex-col items-start'>
                                 <h2 className='text-2xl'>Address</h2>
-                                <p className='text-gray-200'>HabisLiao Sdn Bhd, Jalan Malas, Penang</p>
+                                <p className='text-gray-200'>523 Habislah HQ, No Road</p>
+                                <p className='text-gray-200'>USM, Penang</p>
                             </div>
                         </div>
 

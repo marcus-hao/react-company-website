@@ -3,8 +3,10 @@ import Vision from '../components/Vision';
 import TeamCard from '../components/TeamCard';
 import Slider from 'react-slick';
 import { team } from '../data/teamMembers';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function About() {
+    useDocumentTitle('About Us - HabisLiao')
     var settings = {
         dots: true,
         infinite: false,
