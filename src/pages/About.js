@@ -47,12 +47,12 @@ function About() {
         <div>
             <Vision />
             <div className='w-full bg-[#e9f8f382] py-3'>
-                {/* <div className='md:max-w-[1480px] m-auto  max-w-[600px]'> */}
+                <div className='md:max-w-[1480px] m-auto  max-w-[600px]'>
                     <h1 className='font-bold text-center text-2xl font-bold'>Meet the Team!</h1>
                     <Slider {...settings}>
                         {team.map(members => <TeamCard members={members} />)}
                     </Slider>
-                {/* </div> */}
+                </div>
             </div>
         </div>
     );
